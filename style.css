@@ -1,5 +1,9 @@
 body {
   font-family: sans-serif;
+    background: url('back1.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: animateBack 5s linear infinite;
   background-color: #333;
   color: #eee;
   display: flex;
@@ -10,7 +14,13 @@ body {
 }
 
 #quiz-container {
-  background-color: #222;
+background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  padding: 20%;
+
+ // background-color: #222;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
   padding: 30px;
@@ -26,20 +36,27 @@ h2 {
   font-size: 1.2em;
   margin-bottom: 20px;
   color: #ddd;
+  font-weight: bold;
+ 
 }
 
 .option {
-  background-color: #444;
+
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  background-color: #2C2820;
   border: none;
   border-radius: 5px;
   color: #eee;
   cursor: pointer;
-  display: block;
+  display: block; /* Make the buttons block-level elements */
   font-size: 1em;
-  margin: 10px 0;
+  margin: 10px auto; /* Center the buttons horizontally with auto margin */
   padding: 15px 20px;
   transition: all 0.3s ease;
-  width: calc(100% - 40px);
+  width: 80%; /* Adjust the width as needed */
 }
 
 .option:hover {
